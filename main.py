@@ -5,7 +5,6 @@ from threading import Thread, active_count
 from time import sleep
 from msvcrt import getch
 from os import system
-from ctypes import windll
 from urllib3 import disable_warnings
 from loguru import logger
 from sys import stderr
@@ -13,14 +12,6 @@ from gc import collect
 from sys import exit
 from pypasser import reCaptchaV3
 from urllib.parse import quote_plus
-
-
-disable_warnings()
-def clear(): return system('cls')
-logger.remove()
-logger.add(stderr, format="<white>{time:HH:mm:ss}</white> | <level>{level: <8}</level> | <cyan>{line}</cyan> - <white>{message}</white>")
-windll.kernel32.SetConsoleTitleW('LimeWire Auto Reger | by NAZAVOD')
-print('Telegram channel - https://t.me/n4z4v0d\n')
 
 
 ref_link = str(input('Реферальная ссылка: '))
